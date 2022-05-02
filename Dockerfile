@@ -8,6 +8,8 @@ RUN dnf --setopt=install_weak_deps=False -y module install nodejs:${NODE_VERSION
     npm install -g npm@${NPM_VERSION} && \
     dnf clean all
 
+WORKDIR /app
+
 ADD ./entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
