@@ -1,6 +1,6 @@
 FROM almalinux:8
 
-ARG NODE_VERSION=16
+ARG NODE_VERSION=17
 ARG NPM_VERSION=8.8.0
 
 RUN dnf --setopt=install_weak_deps=False -y module install nodejs:${NODE_VERSION} && \
