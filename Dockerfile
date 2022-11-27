@@ -1,8 +1,6 @@
-FROM alpine:latest
+FROM node:16.15.0-alpine3.15
 
-ARG NODE_VERSION=16.15.0
-
-RUN apk add "nodejs=$NODE_VERSION" npm yarn ncdu git curl
+RUN apk add ncdu git curl
 
 WORKDIR /app
 
