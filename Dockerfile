@@ -1,6 +1,8 @@
 FROM node:19-alpine3.15
 
-RUN apk add ncdu git curl
+RUN apk update && \
+    apk upgrade --no-cache && \
+    apk add --no-cache ncdu git curl
 
 WORKDIR /app
 
